@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh's Largest Online Ticket Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+
+        #head{
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        .contact {
+            /* position:sticky;
+            top: 0px; */
+            width: 100%;
+            height: 45px;
+            background-color: #089D49;
+        }
+
+        .contact ul {
+            list-style: none;
+            display: flex;
+            position: absolute;
+            right: 200px;
+        }
+
+        .contact ul li {
+            margin-top: 3px;
+            padding: 10px;
+        }
+
+
+        .contact ul li a {
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
+            font-family: Arial;
+        }
+
+        .fa-phone {
+            color: white;
+            font-size: 11px;
+            position: absolute;
+            right: 57px;
+            bottom: 15px;
+        }
+
+        .mid1 {
+            width: 100%;
+            position: fixed;
+            top: 40px;
+            z-index: 999;
+            height: 100px;
+            background-color: #FFFFFF;
+            /* background-color: yellow; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            position: relative;
+            left: 200px;
+        }
+
+        .midbar {
+            width: 35%;
+        }
+
+        .work {
+            font-weight: 700;
+            font-size: 1 rem;
+        }
+
+        .work img {
+            padding-left: 20px;
+        }
+
+        .eng {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-right: 200px;
+        }
+
+        .eng img {
+            padding-left: 20px;
+        }
+
+        .midimage {
+            position:relative;
+            top: 140px;
+            width: 100%;
+            height: 440px;
+            background: url(https://i.postimg.cc/YCnDtdZ3/Screenshot-2024-02-16-000433.png) no-repeat center center/cover;
+        }
+
+        .down1 {
+            width: 100%;
+            height: 110px;
+            background-color: #089D49;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            margin-left: 80px;
+            margin-right: 20px;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content p {
+            text-align: center;
+        }
+
+        .mid-content {
+            width: 100%;
+            height: 600px;
+            background-color: #f6f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mid-write h1 {
+            font-size: 2.5rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .mid-write p {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            color: rgb(112, 107, 107);
+            font-family: 'Bree Serif', serif;
+            font-weight: lighter;
+        }
+
+        .mid-write {
+            position: relative;
+            top: -60px;
+        }
+
+        .middle-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 5px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+        }
+
+        .btn {
+            background-color: #089D49;
+            color: white;
+            font-weight: 600;
+            width: 200px;
+            height: 40px;
+            border: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -25px;
+        }
+
+        .middle2 {
+            width: 100%;
+            height: 850px;
+            background-color: white;
+            display: flex;
+        }
+
+        .box {
+            padding: 5px;
+            position: relative;
+            top: 80px;
+        }
+
+        .box3 {
+            width: 560px;
+            height: 585px;
+            padding: 20px;
+        }
+
+        .container1 {
+            width: 100%;
+            height: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .downward {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .downward .head h1 {
+            font-size: 2.5rem;
+            position: relative;
+            top: -40px;
+            color: rgb(70, 68, 68);
+            font-family: 'Bree Serif', serif;
+        }
+
+        .quate {
+            background-color: #089D49;
+            color: #FFFFFF;
+            padding: 15px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -4px;
+            position: relative;
+        }
+
+        .partner {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner .hh {
+            font-size: 1.8rem;
+            margin-top: 80px;
+            text-align: center;
+            color: rgb(70, 68, 68);
+            font-family: 'Bree Serif', serif;
+        }
+
+        .hh1 img {
+            width: 80%;
+            margin: 30px 160px;
+        }
+
+        .trust {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(248, 248, 248);
+            width: 100%;
+            height: 350px;
+        }
+
+        .trust .rr {
+            font-size: 1.8rem;
+            color: rgb(70, 68, 68);
+            font-family: 'Bree Serif', serif;
+            /* margin-top: 40px; */
+        }
+
+        .trust .pp img {
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .down_navbar {
+            width: 100%;
+            height: 500px;
+            display: flex;
+        }
+
+        .ss {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .boxer1 { 
+            width: 225px;
+            height: 240px;
+            position: relative;
+            top: 100px;
+            left: 300px;
+            font-family: 'Bree Serif', serif;
+            color:rgb(99, 99, 99);
+        }
+
+        .boxer1 h5{
+            margin-top: 30px;
+            line-height: 2;
+            font-weight: lighter;
+        }
+
+        .boxer1 .ii{
+            margin-left: 30px;
+        }
+
+        .boxer1 .ii img{
+            height: 50px;
+        }
+
+        .boxer1 p{
+            font-size: 12px;
+            margin-top: 30px;
+        }
+
+        .outer-box{
+            width: 45%;
+            display: flex;
+            margin:50px 400px;
+        }
+
+        .outer-box ul{
+            list-style-type: none;
+        }
+
+        .outer-box ul li{
+            padding-top: 20px;
+            color: black;
+        }
+
+        .outer-box  .boxer3{
+            margin-left: 100px;
+        }
+
+        .outer-box ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        .serve{
+            font-weight: 700;
+        }
+
+        .boxer4 {
+            position: relative;
+            top: 60px;
+            right: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <navbar id="head">
+        <div class="contact">
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><i class="fa-solid fa-phone"></i></li>
+                <li><a href="#">16374</a></li>
+            </ul>
+        </div>
+    </navbar>
+
+    <navbar id="mid">
+        <div class="mid1">
+            <div class="logo">
+                <img src="https://i.postimg.cc/3wfsb833/logoshohoz.png" alt="">
+            </div>
+            <div class="midbar">
+                <div class="work">
+                    <img src="https://i.postimg.cc/cLhyw7jg/bus.png" alt="">
+                    Bus
+                    <img src="https://i.postimg.cc/433C57k8/launch.png" alt="">
+                    Launch
+                    <img src="https://i.postimg.cc/Dwn3SpC3/airplane.png" alt="">
+                    Air
+                    <img src="https://i.postimg.cc/xd87mwMh/train1.png" alt="">
+                    Train
+                    <img src="https://i.postimg.cc/j2k0QQY9/event1.png" alt="">
+                    Event
+                </div>
+            </div>
+            <div class="eng">
+                English
+                <img src="https://i.postimg.cc/KcpdWNCp/dd1.png" alt="">
+            </div>
+        </div>
+
+        <div class="midimage">
+
+        </div>
+        <div class="down1">
+            <div class="content">
+                <h1>250 Million+</h1>
+                <p>Tickets Sold</p>
+            </div>
+            <div class="content">
+                <h1>3000+</h1>
+                <p>Routes</p>
+            </div>
+            <div class="content">
+                <h1>10 Million+</h1>
+                <p>Happy Users</p>
+            </div>
+        </div>
+    </navbar>
+
+    <section class="middle">
+        <div class="mid-content">
+            <div class="mid-write">
+                <h1>Introducing you to the Shohoz way of life</h1>
+                <p>A one-stop solution for your travel needs</p>
+            </div>
+            <div class="middle-img">
+                <div class="box1">
+                    <img src="https://i.postimg.cc/Kzddx0KV/bus-new.png" alt="">
+                    <button class="btn">Shohoz Bus</button>
+                </div>
+                <div class="box1">
+                    <img src="https://i.postimg.cc/2jZs2NMf/launch-new.png" alt="">
+                    <button class="btn">Shohoz Launch</button>
+                </div>
+                <div class="box1">
+                    <img src="https://i.postimg.cc/NMyW330m/event-new.png" alt="">
+                    <button class="btn">Shohoz Event</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="middle2">
+        <div class="box">
+            <img src="https://i.postimg.cc/sgwqvjQ5/mobile1.png" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/fL0r2YHv/mobilesohoz.pngg" alt="">
+        </div>
+    </section>
+
+    <section class="downward">
+        <div class="head">
+            <h1>Shohoz Highlight</h1>
+        </div>
+
+        <div class="container1">
+            <div class="box3">
+                <img src="https://i.postimg.cc/y8V21gdV/maliha-with-prime-minister.webp" alt="">
+                <div class="quate">
+                    <h2>Maliha M. Quadir joins 'Investment in R & D in LDCs for Smart and Innovative Societies' with the
+                        Honorable PM in Qatar</h2>
+                </div>
+            </div>
+            <div class="box3">
+                <img src="https://i.postimg.cc/kXNkPF71/box2.webp" alt="">
+                <div class="quate">
+                    <h2>৪ মাসে ১ কোটি রেলের টিকিট ইস্যু করলো সহজ-জেভি</h2>
+                </div>
+            </div>
+            <div class="box3">
+                <img src="https://i.postimg.cc/wMLnvDLB/box3.png" alt="">
+                <div class="quate">
+                    <h2>কুরবানির-ঈদে-স্বচ্ছন্দে-অনলাইনে-রেল-টিকেট-পেলো</h2>
+                </div>
+            </div>
+            <div class="box3">
+                <img src="https://i.postimg.cc/BQfdzwfP/box4.webp" alt="">
+                <div class="quate">
+                    <h2>ঈদে ট্রেন টিকেট বিক্রিতে ইতিহাস গড়লো সহজ!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner">
+        <div class="hh">
+            <h1>We were featured on</h1>
+        </div>
+        <div class="hh1">
+            <img src="https://i.postimg.cc/9QFN3680/partner.png" alt="">
+        </div>
+    </section>
+
+    <section class="trust">
+        <div class="rr">
+            <h1>Our Trusted Partners</h1>
+        </div>
+
+        <div class="pp">
+            <img src="https://i.postimg.cc/02CHBkCh/tt5.png" alt="">
+            <img src="https://i.postimg.cc/tJ3mypGZ/tt2.png" alt="">
+            <img src="https://i.postimg.cc/VsnhXB0f/tt3.png" alt="">
+            <img src="https://i.postimg.cc/Yq7sRGQ1/tt4.png" alt="">
+        </div>
+    </section>
+
+    <section class="down_navbar">
+        <div class="ss">
+            <div class="boxer1">
+                <div class="ii">
+                    <img src="https://i.postimg.cc/3wfsb833/logoshohoz.png" alt="">
+                </div>
+                <div class="yy">
+                    <h5>Shohoz, owned and operated by Shohoj Limited, is Bangladesh’s largest online ticket destination,
+                        which is committed to making your life convenient, easier and smarter.</h5>
+                    <p>© 2015-2024 Shohoz · All Rights Reserved.</p>
+                </div>
+            </div>
+
+            <div class="outer-box">
+
+                <div class="boxer2">
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Terms Of Use</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="boxer3">
+                    <ul>
+                        <li><a href="" class="serve">Services</a></li>
+                        <li><a href="">Bus Tickets</a></li>
+                        <li><a href="">Launch Tickets</a></li>
+                        <li><a href="">Train Tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="boxer4">
+                <img src="https://i.postimg.cc/SNWHKhJ3/social.png" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
